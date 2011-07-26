@@ -1,0 +1,110 @@
+{
+  "title": "fixtures",
+  "elements": [
+    {
+      "jpg": "wadus uri",
+      "title": "file 1",
+      "txt": "file content",
+      "txts": [
+        "file content",
+        "file content"
+      ],
+      "elements": [
+
+      ],
+      "type": "item",
+      "link": "/file-1",
+      "txt_thumb": "file content",
+      "jpgs": [
+        "wadus uri"
+      ]
+    },
+    {
+      "jpg": "wadus uri",
+      "title": "subfolder 1",
+      "txt": "file content",
+      "txts": [
+        "file content"
+      ],
+      "elements": [
+        {
+          "jpg": "wadus uri",
+          "title": "file 1",
+          "txt": "file content",
+          "txts": [
+            "file content"
+          ],
+          "elements": [
+
+          ],
+          "type": "item",
+          "link": "/subfolder-1/file-1",
+          "jpgs": [
+            "wadus uri"
+          ]
+        },
+        {
+          "jpg": "wadus uri",
+          "title": "file 2",
+          "txt": "file content",
+          "txts": [
+            "file content"
+          ],
+          "elements": [
+
+          ],
+          "type": "item",
+          "link": "/subfolder-1/file-2",
+          "jpgs": [
+            "wadus uri"
+          ]
+        },
+        {
+          "title": "subsubfolder 1",
+          "elements": [
+            {
+              "title": "file 1",
+              "txt": "file content",
+              "txts": [
+                "file content"
+              ],
+              "elements": [
+
+              ],
+              "type": "item",
+              "link": "/subfolder-1/subsubfolder-1/file-1"
+            }
+          ],
+          "type": "collection",
+          "link": "/subfolder-1/subsubfolder-1"
+        }
+      ],
+      "type": "collection",
+      "link": "/subfolder-1",
+      "jpgs": [
+        "wadus uri"
+      ]
+    },
+    {
+      "title": "subfolder 2",
+      "elements": [
+        {
+          "title": "file 1",
+          "txt": "file content",
+          "txts": [
+            "file content"
+          ],
+          "elements": [
+
+          ],
+          "type": "item",
+          "link": "/subfolder-2/file-1"
+        }
+      ],
+      "type": "collection",
+      "link": "/subfolder-2"
+    }
+  ],
+  "type": "collection",
+  "link": "/"
+}
