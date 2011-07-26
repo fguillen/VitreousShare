@@ -1,11 +1,11 @@
 require File.expand_path( "#{File.dirname(__FILE__)}/test_helper" )
 
-class ElementSearcherTest < Test::Unit::TestCase
+class IndexSearcherTest < Test::Unit::TestCase
   def test_search
     root = JSON.load( File.read( "#{FIXTURES_PATH}/index.json" ) )
     
     element_found = 
-      Vitreous::Share::ElementSearcher.search( 
+      Vitreous::Share::IndexSearcher.search( 
         root, 
         '/subfolder-1/subsubfolder-1/file-1'
       )
@@ -18,7 +18,7 @@ class ElementSearcherTest < Test::Unit::TestCase
     root = JSON.load( File.read( "#{FIXTURES_PATH}/index.json" ) )
     
     element_found = 
-      Vitreous::Share::ElementSearcher.search( 
+      Vitreous::Share::IndexSearcher.search( 
         root, 
         '/not/exists'
       )
