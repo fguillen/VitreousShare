@@ -1,7 +1,12 @@
 require 'json'
 require 'dropbox'
+require 'mustache'
 
-require "vitreous_share/version"
-require "vitreous_share/common_structure"
-require "vitreous_share/local_structure"
-require "vitreous_share/dropbox_structure"
+require "vitreous/vitreous"
+require "vitreous/share/indexer_utils"
+require "vitreous/share/version"
+require "vitreous/share/common_structure"
+require "vitreous/share/local_structure"
+require "vitreous/share/dropbox_structure"
+require "vitreous/share/indexer"
+require "vitreous/share/element_searcher"

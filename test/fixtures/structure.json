@@ -2,7 +2,7 @@
   {
     "type": "file",
     "content": null,
-    "path": "http://dl.dropbox.com/u/174//folder_structure/file 1.jpg",
+    "path": "/file 1.jpg",
     "elements": [
 
     ],
@@ -11,7 +11,16 @@
   {
     "type": "file",
     "content": "file content",
-    "path": "http://dl.dropbox.com/u/174//folder_structure/file 1.txt",
+    "path": "/file 1.thumb.txt",
+    "elements": [
+
+    ],
+    "name": "file 1.thumb.txt"
+  },
+  {
+    "type": "file",
+    "content": "file content",
+    "path": "/file 1.txt",
     "elements": [
 
     ],
@@ -20,12 +29,12 @@
   {
     "type": "directory",
     "content": null,
-    "path": "http://dl.dropbox.com/u/174//folder_structure/subfolder 1",
+    "path": "/subfolder 1",
     "elements": [
       {
         "type": "file",
         "content": null,
-        "path": "http://dl.dropbox.com/u/174//folder_structure/subfolder 1/file 1.jpg",
+        "path": "/subfolder 1/file 1.jpg",
         "elements": [
 
         ],
@@ -34,7 +43,7 @@
       {
         "type": "file",
         "content": "file content",
-        "path": "http://dl.dropbox.com/u/174//folder_structure/subfolder 1/file 1.txt",
+        "path": "/subfolder 1/file 1.txt",
         "elements": [
 
         ],
@@ -43,7 +52,7 @@
       {
         "type": "file",
         "content": null,
-        "path": "http://dl.dropbox.com/u/174//folder_structure/subfolder 1/file 2.jpg",
+        "path": "/subfolder 1/file 2.jpg",
         "elements": [
 
         ],
@@ -52,7 +61,7 @@
       {
         "type": "file",
         "content": "file content",
-        "path": "http://dl.dropbox.com/u/174//folder_structure/subfolder 1/file 2.txt",
+        "path": "/subfolder 1/file 2.txt",
         "elements": [
 
         ],
@@ -61,12 +70,12 @@
       {
         "type": "directory",
         "content": null,
-        "path": "http://dl.dropbox.com/u/174//folder_structure/subfolder 1/subsubfolder 1",
+        "path": "/subfolder 1/subsubfolder 1",
         "elements": [
           {
             "type": "file",
             "content": "file content",
-            "path": "http://dl.dropbox.com/u/174//folder_structure/subfolder 1/subsubfolder 1/file 1.txt",
+            "path": "/subfolder 1/subsubfolder 1/file 1.txt",
             "elements": [
 
             ],
@@ -79,14 +88,32 @@
     "name": "subfolder 1"
   },
   {
+    "type": "file",
+    "content": null,
+    "path": "/subfolder 1.jpg",
+    "elements": [
+
+    ],
+    "name": "subfolder 1.jpg"
+  },
+  {
+    "type": "file",
+    "content": "file content",
+    "path": "/subfolder 1.txt",
+    "elements": [
+
+    ],
+    "name": "subfolder 1.txt"
+  },
+  {
     "type": "directory",
     "content": null,
-    "path": "http://dl.dropbox.com/u/174//folder_structure/subfolder 2",
+    "path": "/subfolder 2",
     "elements": [
       {
         "type": "file",
         "content": "file content",
-        "path": "http://dl.dropbox.com/u/174//folder_structure/subfolder 2/file 1.txt",
+        "path": "/subfolder 2/file 1.txt",
         "elements": [
 
         ],

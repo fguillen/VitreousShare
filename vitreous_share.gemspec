@@ -1,10 +1,10 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "vitreous_share/version"
+require "vitreous/share/version"
 
 Gem::Specification.new do |s|
   s.name        = "vitreous_share"
-  s.version     = VitreousShare::VERSION
+  s.version     = Vitreous::Share::VERSION
   s.authors     = ["Fernando Guillen"]
   s.email       = ["fguillen.mail@gmail.com"]
   s.homepage    = ""
@@ -24,4 +24,5 @@ Gem::Specification.new do |s|
   
   s.add_dependency "json"
   s.add_dependency "dropbox"
+  s.add_dependency "mustache"
 end

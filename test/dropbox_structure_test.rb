@@ -8,7 +8,7 @@ class DropboxStructureTest < Test::Unit::TestCase
   
   def test_generate
     structure =
-      VitreousShare::DropboxStructure.new( 
+      Vitreous::Share::DropboxStructure.new( 
         "/folder_structure",
         @session_serialized
       )
@@ -20,18 +20,18 @@ class DropboxStructureTest < Test::Unit::TestCase
   
   def test_json
     structure =
-      VitreousShare::DropboxStructure.new( 
+      Vitreous::Share::DropboxStructure.new( 
         "/folder_structure",
         @session_serialized
       )
       
     # # create fixture
-    # File.open( "#{FIXTURES_PATH}/dropbox_structure.json", 'w' ) do |f|
+    # File.open( "#{FIXTURES_PATH}/structure.json", 'w' ) do |f|
     #   f.write structure.json
     # end
         
     assert_equal( 
-      JSON.load( File.read( "#{FIXTURES_PATH}/dropbox_structure.json" ) ), 
+      JSON.load( File.read( "#{FIXTURES_PATH}/structure.json" ) ), 
       JSON.load( structure.json )
     )
   end
