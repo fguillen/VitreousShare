@@ -5,16 +5,20 @@ module Vitreous
       def initialize( path )
         @path = path
       end
-    
+      
       def generate( path = @path )
+        {
+          'name'     => File.basename( path ),
+          'path'     => path == @path ? '/' : path.gsub( @path, '' ),
+          'type'     => File.directory?( path ) ? 'directory' : 'file',
+          'elements' => File.directory?( path ) ? tree( path ) : [],
+          'content'  => CommonStructure.txt?( path ) ? File.read( path ) : nil
+        }
+      end
+      
+      def tree( path )
         Dir.glob( File.join( path, '*' ) ).sort.map do |e|
-          {
-            :name     => File.basename( e ),
-            :path     => e.gsub( @path, '' ),
-            :type     => File.directory?( e ) ? :directory : :file,
-            :elements => File.directory?( e ) ? generate( e ) : [],
-            :content  => CommonStructure.txt?( e ) ? File.read( e ) : nil
-          }
+          generate( e ) 
         end
       end
     

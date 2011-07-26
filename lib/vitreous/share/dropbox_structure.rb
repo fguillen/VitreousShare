@@ -1,22 +1,26 @@
 module Vitreous
   module Share
     class DropboxStructure < CommonStructure
-      def initialize( path, serialized_session )
+      def initialize( path, session )
         @path = path
-      
-        @session      = ::Dropbox::Session.deserialize( serialized_session )
-        @session.mode = :dropbox
+        @session = session
       end
     
       def generate( path = @path )
-        @session.entry( path ).list.to_a.map do |e|
-          {
-            :name     => File.basename( e.path ),
-            :path     => e.path.gsub( @path, '' ).gsub( /^\/Public\//, '' ),
-            :type     => e.directory? ? :directory : :file,
-            :elements => e.directory? ? generate( e.path ) : [],
-            :content  => CommonStructure.txt?( e.path ) ? @session.download( e.path ) : nil
-          }
+        element = @session.entry( path )
+        
+        {
+          'name'     => File.basename( element.path ),
+          'path'     => path == @path ? '/' : element.path.gsub( @path, '' ).gsub( /^\/Public\//, '' ),
+          'type'     => element.metadata.directory? ? 'directory' : 'file',
+          'elements' => element.metadata.directory? ? tree( element ) : [],
+          'content'  => CommonStructure.txt?( element.path ) ? @session.download( element.path ) : nil
+        }
+      end
+      
+      def tree( element )
+        element.list.to_a.map do |e|
+          generate( e.path )
         end
       end
     end

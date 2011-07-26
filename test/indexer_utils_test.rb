@@ -31,7 +31,7 @@ class IndexerUtilsTest < Test::Unit::TestCase
   def test_grouping
     structure = JSON.load( File.read( "#{FIXTURES_PATH}/structure.json" ) )
     
-    groups = Vitreous::Share::IndexerUtils.grouping( structure )
+    groups = Vitreous::Share::IndexerUtils.grouping( structure['elements'] )
     assert_equal( 3, groups.size )
   end
   

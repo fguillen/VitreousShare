@@ -1,110 +1,110 @@
 {
-  "title": "root",
-  "type": "collection",
+  "title": "folder_structure",
   "elements": [
     {
-      "title": "file 1",
-      "type": "item",
       "jpg": "/file 1.jpg",
-      "elements": [
-
-      ],
-      "link": "/file-1",
+      "title": "file 1",
       "txt": "file content",
       "txts": [
         "file content",
         "file content"
       ],
+      "elements": [
+
+      ],
+      "type": "item",
+      "link": "/file-1",
       "txt_thumb": "file content",
       "jpgs": [
         "/file 1.jpg"
       ]
     },
     {
-      "title": "subfolder 1",
-      "type": "collection",
       "jpg": "/subfolder 1.jpg",
+      "title": "subfolder 1",
+      "txt": "file content",
+      "txts": [
+        "file content"
+      ],
       "elements": [
         {
-          "title": "file 1",
-          "type": "item",
           "jpg": "/subfolder 1/file 1.jpg",
-          "elements": [
-
-          ],
-          "link": "/subfolder-1/file-1",
+          "title": "file 1",
           "txt": "file content",
           "txts": [
             "file content"
           ],
+          "elements": [
+
+          ],
+          "type": "item",
+          "link": "/subfolder-1/file-1",
           "jpgs": [
             "/subfolder 1/file 1.jpg"
           ]
         },
         {
-          "title": "file 2",
-          "type": "item",
           "jpg": "/subfolder 1/file 2.jpg",
-          "elements": [
-
-          ],
-          "link": "/subfolder-1/file-2",
+          "title": "file 2",
           "txt": "file content",
           "txts": [
             "file content"
           ],
+          "elements": [
+
+          ],
+          "type": "item",
+          "link": "/subfolder-1/file-2",
           "jpgs": [
             "/subfolder 1/file 2.jpg"
           ]
         },
         {
           "title": "subsubfolder 1",
-          "type": "collection",
           "elements": [
             {
               "title": "file 1",
-              "type": "item",
-              "elements": [
-
-              ],
-              "link": "/subfolder-1/subsubfolder-1/file-1",
               "txt": "file content",
               "txts": [
                 "file content"
-              ]
+              ],
+              "elements": [
+
+              ],
+              "type": "item",
+              "link": "/subfolder-1/subsubfolder-1/file-1"
             }
           ],
+          "type": "collection",
           "link": "/subfolder-1/subsubfolder-1"
         }
       ],
+      "type": "collection",
       "link": "/subfolder-1",
-      "txt": "file content",
-      "txts": [
-        "file content"
-      ],
       "jpgs": [
         "/subfolder 1.jpg"
       ]
     },
     {
       "title": "subfolder 2",
-      "type": "collection",
       "elements": [
         {
           "title": "file 1",
-          "type": "item",
-          "elements": [
-
-          ],
-          "link": "/subfolder-2/file-1",
           "txt": "file content",
           "txts": [
             "file content"
-          ]
+          ],
+          "elements": [
+
+          ],
+          "type": "item",
+          "link": "/subfolder-2/file-1"
         }
       ],
+      "type": "collection",
       "link": "/subfolder-2"
     }
   ],
+  "type": "collection",
   "link": "/"
 }

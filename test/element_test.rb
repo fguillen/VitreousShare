@@ -5,7 +5,7 @@ class ElementTest < Test::Unit::TestCase
     index = JSON.load( File.read( "#{FIXTURES_PATH}/index.json" ) )
     element = Vitreous::Share::Element.new( index )
     
-    assert_equal( 'root', element.title )
+    assert_equal( 'folder_structure', element.title )
     assert_equal( '/', element.link )
     assert_equal( true, element.collection? )
     assert_equal( false, element.item? )

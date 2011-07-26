@@ -4,7 +4,7 @@ class IndexerTest < Test::Unit::TestCase
   def test_generate
     indexer = 
       Vitreous::Share::Indexer.new( 
-        File.read( "#{FIXTURES_PATH}/structure.json" ) 
+        JSON.load( File.read( "#{FIXTURES_PATH}/structure.json" ) )
       )
     
     assert( indexer.generate.is_a? Array )
@@ -13,7 +13,7 @@ class IndexerTest < Test::Unit::TestCase
   def test_json
     indexer = 
       Vitreous::Share::Indexer.new( 
-        File.read( "#{FIXTURES_PATH}/structure.json" ) 
+        JSON.load( File.read( "#{FIXTURES_PATH}/structure.json" ) )
       )
       
     # # create fixture
