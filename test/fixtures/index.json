@@ -2,7 +2,7 @@
   "title": "folder_structure",
   "elements": [
     {
-      "jpg": "http://dl.dropbox.com/u/174/folder_structure",
+      "jpg": "http://dl.dropbox.com/u/174/folder_structure/file 1.jpg",
       "title": "file 1",
       "txt": "file content",
       "txts": [
@@ -16,11 +16,11 @@
       "link": "/file-1",
       "txt_thumb": "file content",
       "jpgs": [
-        "http://dl.dropbox.com/u/174/folder_structure"
+        "http://dl.dropbox.com/u/174/folder_structure/file 1.jpg"
       ]
     },
     {
-      "jpg": "http://dl.dropbox.com/u/174/folder_structure",
+      "jpg": "http://dl.dropbox.com/u/174/folder_structure/subfolder 1.jpg",
       "title": "subfolder 1",
       "txt": "file content",
       "txts": [
@@ -28,7 +28,7 @@
       ],
       "elements": [
         {
-          "jpg": "http://dl.dropbox.com/u/174/folder_structure/subfolder 1",
+          "jpg": "http://dl.dropbox.com/u/174/folder_structure/subfolder 1/file 1.jpg",
           "title": "file 1",
           "txt": "file content",
           "txts": [
@@ -40,11 +40,11 @@
           "type": "item",
           "link": "/subfolder-1/file-1",
           "jpgs": [
-            "http://dl.dropbox.com/u/174/folder_structure/subfolder 1"
+            "http://dl.dropbox.com/u/174/folder_structure/subfolder 1/file 1.jpg"
           ]
         },
         {
-          "jpg": "http://dl.dropbox.com/u/174/folder_structure/subfolder 1",
+          "jpg": "http://dl.dropbox.com/u/174/folder_structure/subfolder 1/file 2.jpg",
           "title": "file 2",
           "txt": "file content",
           "txts": [
@@ -56,7 +56,7 @@
           "type": "item",
           "link": "/subfolder-1/file-2",
           "jpgs": [
-            "http://dl.dropbox.com/u/174/folder_structure/subfolder 1"
+            "http://dl.dropbox.com/u/174/folder_structure/subfolder 1/file 2.jpg"
           ]
         },
         {
@@ -82,7 +82,7 @@
       "type": "collection",
       "link": "/subfolder-1",
       "jpgs": [
-        "http://dl.dropbox.com/u/174/folder_structure"
+        "http://dl.dropbox.com/u/174/folder_structure/subfolder 1.jpg"
       ]
     },
     {

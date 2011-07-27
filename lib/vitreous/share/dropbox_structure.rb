@@ -10,7 +10,7 @@ module Vitreous
         {
           'name'     => File.basename( path ),
           'path'     => '/',
-          'uri'      => "#{dropbox_base_uri}#{path.gsub( /^\/Public\//, '' )}",
+          'uri'      => uri( path ),
           'type'     => 'directory',
           'elements' => tree( path ),
           'content'  => nil
@@ -22,7 +22,7 @@ module Vitreous
           {
             'name'     => File.basename( e.path ),
             'path'     => e.path.gsub( @path, '' ),
-            'uri'      => "#{dropbox_base_uri}#{path.gsub( /^\/Public\//, '' )}",
+            'uri'      => uri( e.path ),
             'type'     => e.directory? ? 'directory' : 'file',
             'elements' => e.directory? ? tree( e.path ) : [],
             'content'  => CommonStructure.txt?( e.path ) ? @session.download( e.path ) : nil
@@ -30,8 +30,8 @@ module Vitreous
         end
       end
       
-      def dropbox_base_uri
-        "http://dl.dropbox.com/u/#{@session.account.uid}"
+      def uri( path )
+        "http://dl.dropbox.com/u/#{@session.account.uid}#{path.gsub( /^\/Public\//, '' )}"
       end
     end
   end
