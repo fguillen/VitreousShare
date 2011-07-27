@@ -12,8 +12,8 @@ module Vitreous
         {
           'name'     => File.basename( element.path ),
           'path'     => path == @path ? '/' : element.path.gsub( @path, '' ).gsub( /^\/Public\//, '' ),
-          'type'     => element.metadata.directory? ? 'directory' : 'file',
-          'elements' => element.metadata.directory? ? tree( element ) : [],
+          'type'     => element.directory? ? 'directory' : 'file',
+          'elements' => element.directory? ? tree( element ) : [],
           'content'  => CommonStructure.txt?( element.path ) ? @session.download( element.path ) : nil
         }
       end
