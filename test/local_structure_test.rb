@@ -8,6 +8,7 @@ class LocalStructureTest < Test::Unit::TestCase
       )
     
     # # create fixture
+    # puts "!!This should be commented!!"
     # File.open( "#{FIXTURES_PATH}/structure.json", 'w' ) do |f|
     #   f.write( JSON.pretty_generate( structure.generate ) )
     # end

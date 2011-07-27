@@ -1,4 +1,5 @@
 require File.expand_path( "#{File.dirname(__FILE__)}/test_helper" )
+require 'dummy_dropbox'
 
 class DropboxStructureTest < Test::Unit::TestCase
   def setup
@@ -15,6 +16,7 @@ class DropboxStructureTest < Test::Unit::TestCase
       )
       
     # # create fixture
+    # puts "!!This should be commented!!"
     # File.open( "#{FIXTURES_PATH}/structure.json", 'w' ) do |f|
     #   f.write structure.json
     # end

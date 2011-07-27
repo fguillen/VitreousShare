@@ -1,8 +1,6 @@
 require 'rubygems'
 require 'test/unit'
 require 'mocha'
-require 'dummy_dropbox'
-
 
 require "#{File.dirname( __FILE__)}/../lib/vitreous_share"
 

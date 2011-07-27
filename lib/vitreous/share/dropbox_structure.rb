@@ -5,22 +5,26 @@ module Vitreous
         @path = path
         @session = session
       end
-    
+      
       def generate( path = @path )
-        element = @session.entry( path )
-        
         {
-          'name'     => File.basename( element.path ),
-          'path'     => path == @path ? '/' : element.path.gsub( @path, '' ).gsub( /^\/Public\//, '' ),
-          'type'     => element.directory? ? 'directory' : 'file',
-          'elements' => element.directory? ? tree( element ) : [],
-          'content'  => CommonStructure.txt?( element.path ) ? @session.download( element.path ) : nil
+          'name'     => File.basename( path ),
+          'path'     => '/',
+          'type'     => 'directory',
+          'elements' => tree( path ),
+          'content'  => nil
         }
       end
       
-      def tree( element )
-        element.list.to_a.map do |e|
-          generate( e.path )
+      def tree( path )
+        @session.entry( path ).list.to_a.map do |e|
+          {
+            'name'     => File.basename( e.path ),
+            'path'     => e.path.gsub( @path, '' ).gsub( /^\/Public\//, '' ),
+            'type'     => e.directory? ? 'directory' : 'file',
+            'elements' => e.directory? ? tree( e.path ) : [],
+            'content'  => CommonStructure.txt?( e.path ) ? @session.download( e.path ) : nil
+          }
         end
       end
     end
