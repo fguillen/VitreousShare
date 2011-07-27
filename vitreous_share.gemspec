@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Vitreous::Share::VERSION
   s.authors     = ["Fernando Guillen"]
   s.email       = ["fguillen.mail@gmail.com"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/fguillen/VitreousShare"
   s.summary     = "Shared components for Vitreous"
   s.description = "Shared components for Vitreous"
 
