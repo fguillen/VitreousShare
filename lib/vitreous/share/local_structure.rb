@@ -24,7 +24,7 @@ module Vitreous
       end
       
       def uri( path )
-        "file:/#{path}"
+        path.gsub( @path, '' )
       end
     
     end
