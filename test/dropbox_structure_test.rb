@@ -15,6 +15,8 @@ class DropboxStructureTest < Test::Unit::TestCase
   end
   
   def test_generate
+    Vitreous::Share::DropboxStructure.any_instance.stubs( :uri ).returns( 'wadus uri' )
+    
     structure =
       Vitreous::Share::DropboxStructure.new( 
         "/folder_structure",
@@ -23,12 +25,12 @@ class DropboxStructureTest < Test::Unit::TestCase
       
     # # create fixture
     # puts "!!This should be commented!!"
-    # File.open( "#{FIXTURES_PATH}/dropbox_structure.json", 'w' ) do |f|
+    # File.open( "#{FIXTURES_PATH}/structure.json", 'w' ) do |f|
     #   f.write JSON.pretty_generate structure.generate
     # end
         
     assert_equal( 
-      JSON.load( File.read( "#{FIXTURES_PATH}/dropbox_structure.json" ) ), 
+      JSON.load( File.read( "#{FIXTURES_PATH}/structure.json" ) ), 
       structure.generate
     )
   end

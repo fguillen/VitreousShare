@@ -1,10 +1,10 @@
 {
   "name": "folder_structure",
-  "uri": "http://dl.dropbox.com/u/174/folder_structure",
+  "uri": "wadus uri",
   "elements": [
     {
       "name": "file 1.jpg",
-      "uri": "http://dl.dropbox.com/u/174/folder_structure/file 1.jpg",
+      "uri": "wadus uri",
       "elements": [
 
       ],
@@ -14,7 +14,7 @@
     },
     {
       "name": "file 1.thumb.txt",
-      "uri": "http://dl.dropbox.com/u/174/folder_structure/file 1.thumb.txt",
+      "uri": "wadus uri",
       "elements": [
 
       ],
@@ -24,7 +24,7 @@
     },
     {
       "name": "file 1.txt",
-      "uri": "http://dl.dropbox.com/u/174/folder_structure/file 1.txt",
+      "uri": "wadus uri",
       "elements": [
 
       ],
@@ -34,11 +34,11 @@
     },
     {
       "name": "subfolder 1",
-      "uri": "http://dl.dropbox.com/u/174/folder_structure/subfolder 1",
+      "uri": "wadus uri",
       "elements": [
         {
           "name": "file 1.jpg",
-          "uri": "http://dl.dropbox.com/u/174/folder_structure/subfolder 1/file 1.jpg",
+          "uri": "wadus uri",
           "elements": [
 
           ],
@@ -48,7 +48,7 @@
         },
         {
           "name": "file 1.txt",
-          "uri": "http://dl.dropbox.com/u/174/folder_structure/subfolder 1/file 1.txt",
+          "uri": "wadus uri",
           "elements": [
 
           ],
@@ -58,7 +58,7 @@
         },
         {
           "name": "file 2.jpg",
-          "uri": "http://dl.dropbox.com/u/174/folder_structure/subfolder 1/file 2.jpg",
+          "uri": "wadus uri",
           "elements": [
 
           ],
@@ -68,7 +68,7 @@
         },
         {
           "name": "file 2.txt",
-          "uri": "http://dl.dropbox.com/u/174/folder_structure/subfolder 1/file 2.txt",
+          "uri": "wadus uri",
           "elements": [
 
           ],
@@ -78,11 +78,11 @@
         },
         {
           "name": "subsubfolder 1",
-          "uri": "http://dl.dropbox.com/u/174/folder_structure/subfolder 1/subsubfolder 1",
+          "uri": "wadus uri",
           "elements": [
             {
               "name": "file 1.txt",
-              "uri": "http://dl.dropbox.com/u/174/folder_structure/subfolder 1/subsubfolder 1/file 1.txt",
+              "uri": "wadus uri",
               "elements": [
 
               ],
@@ -102,7 +102,7 @@
     },
     {
       "name": "subfolder 1.jpg",
-      "uri": "http://dl.dropbox.com/u/174/folder_structure/subfolder 1.jpg",
+      "uri": "wadus uri",
       "elements": [
 
       ],
@@ -112,7 +112,7 @@
     },
     {
       "name": "subfolder 1.txt",
-      "uri": "http://dl.dropbox.com/u/174/folder_structure/subfolder 1.txt",
+      "uri": "wadus uri",
       "elements": [
 
       ],
@@ -122,11 +122,11 @@
     },
     {
       "name": "subfolder 2",
-      "uri": "http://dl.dropbox.com/u/174/folder_structure/subfolder 2",
+      "uri": "wadus uri",
       "elements": [
         {
           "name": "file 1.txt",
-          "uri": "http://dl.dropbox.com/u/174/folder_structure/subfolder 2/file 1.txt",
+          "uri": "wadus uri",
           "elements": [
 
           ],
