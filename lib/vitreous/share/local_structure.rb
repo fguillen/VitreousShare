@@ -24,9 +24,12 @@ module Vitreous
       end
       
       def uri( path )
-        "/local#{path.gsub( @path, '' )}"
+        "#{base_uri}#{path.gsub( @path, '' )}"
       end
-    
+      
+      def base_uri
+        ""
+      end
     end
   end
 end
