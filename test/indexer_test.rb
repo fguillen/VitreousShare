@@ -4,7 +4,7 @@ class IndexerTest < Test::Unit::TestCase
   def test_generate
     indexer = 
       Vitreous::Share::Indexer.new( 
-        JSON.load( File.read( "#{FIXTURES_PATH}/structure.json" ) )
+        JSON.load( File.read( "#{FIXTURES_PATH}/dropbox_structure.json" ) )
       )
     
     assert( indexer.generate.is_a? Array )
@@ -13,10 +13,11 @@ class IndexerTest < Test::Unit::TestCase
   def test_json
     indexer = 
       Vitreous::Share::Indexer.new( 
-        JSON.load( File.read( "#{FIXTURES_PATH}/structure.json" ) )
+        JSON.load( File.read( "#{FIXTURES_PATH}/dropbox_structure.json" ) )
       )
       
     # # create fixture
+    # puts "!!This should be commented!!"
     # File.open( "#{FIXTURES_PATH}/index.json", 'w' ) do |f|
     #   f.write indexer.json
     # end

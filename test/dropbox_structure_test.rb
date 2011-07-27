@@ -5,6 +5,12 @@ class DropboxStructureTest < Test::Unit::TestCase
   def setup
     DummyDropbox.root_path = FIXTURES_PATH
     @session = ::Dropbox::Session.new( 'key', 'secret' )
+    
+    # @session = 
+    #   ::Dropbox::Session.deserialize(
+    #     File.read( "#{File.dirname(__FILE__)}/tmp/session_authorized.serialized" )
+    #   )
+    
     @session.mode = :dropbox
   end
   
