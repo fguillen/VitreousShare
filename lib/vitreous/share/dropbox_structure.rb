@@ -31,7 +31,7 @@ module Vitreous
       end
       
       def uri( path )
-        "http://dl.dropbox.com/u/#{@session.account.uid}#{path.gsub( /^\/Public\//, '' )}"
+        "http://dl.dropbox.com/u/#{@session.account.uid}/#{path.gsub( /^\/Public\//, '' ).gsub( /^\//, '' )}"
       end
     end
   end
