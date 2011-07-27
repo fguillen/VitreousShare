@@ -41,7 +41,7 @@ module Vitreous
           if( ext_name =~ Vitreous::TXT_EXTENSIONS )
             result[meta_ext_name] = e['content']
           else
-            result[meta_ext_name] = e['path']
+            result[meta_ext_name] = e['uri']
           end
         end
         

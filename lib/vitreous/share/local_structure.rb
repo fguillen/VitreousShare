@@ -10,6 +10,7 @@ module Vitreous
         {
           'name'     => File.basename( path ),
           'path'     => path == @path ? '/' : path.gsub( @path, '' ),
+          'uri'      => "file:/#{path}",
           'type'     => File.directory?( path ) ? 'directory' : 'file',
           'elements' => File.directory?( path ) ? tree( path ) : [],
           'content'  => CommonStructure.txt?( path ) ? File.read( path ) : nil

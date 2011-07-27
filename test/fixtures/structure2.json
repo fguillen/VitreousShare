@@ -1,0 +1,131 @@
+{
+  "name": "folder_structure",
+  "elements": [
+    {
+      "name": "file 1.jpg",
+      "elements": [
+
+      ],
+      "type": "file",
+      "content": null,
+      "path": "/file 1.jpg"
+    },
+    {
+      "name": "file 1.thumb.txt",
+      "elements": [
+
+      ],
+      "type": "file",
+      "content": "file content",
+      "path": "/file 1.thumb.txt"
+    },
+    {
+      "name": "file 1.txt",
+      "elements": [
+
+      ],
+      "type": "file",
+      "content": "file content",
+      "path": "/file 1.txt"
+    },
+    {
+      "name": "subfolder 1",
+      "elements": [
+        {
+          "name": "file 1.jpg",
+          "elements": [
+
+          ],
+          "type": "file",
+          "content": null,
+          "path": "/subfolder 1/file 1.jpg"
+        },
+        {
+          "name": "file 1.txt",
+          "elements": [
+
+          ],
+          "type": "file",
+          "content": "file content",
+          "path": "/subfolder 1/file 1.txt"
+        },
+        {
+          "name": "file 2.jpg",
+          "elements": [
+
+          ],
+          "type": "file",
+          "content": null,
+          "path": "/subfolder 1/file 2.jpg"
+        },
+        {
+          "name": "file 2.txt",
+          "elements": [
+
+          ],
+          "type": "file",
+          "content": "file content",
+          "path": "/subfolder 1/file 2.txt"
+        },
+        {
+          "name": "subsubfolder 1",
+          "elements": [
+            {
+              "name": "file 1.txt",
+              "elements": [
+
+              ],
+              "type": "file",
+              "content": "file content",
+              "path": "/subfolder 1/subsubfolder 1/file 1.txt"
+            }
+          ],
+          "type": "directory",
+          "content": null,
+          "path": "/subfolder 1/subsubfolder 1"
+        }
+      ],
+      "type": "directory",
+      "content": null,
+      "path": "/subfolder 1"
+    },
+    {
+      "name": "subfolder 1.jpg",
+      "elements": [
+
+      ],
+      "type": "file",
+      "content": null,
+      "path": "/subfolder 1.jpg"
+    },
+    {
+      "name": "subfolder 1.txt",
+      "elements": [
+
+      ],
+      "type": "file",
+      "content": "file content",
+      "path": "/subfolder 1.txt"
+    },
+    {
+      "name": "subfolder 2",
+      "elements": [
+        {
+          "name": "file 1.txt",
+          "elements": [
+
+          ],
+          "type": "file",
+          "content": "file content",
+          "path": "/subfolder 2/file 1.txt"
+        }
+      ],
+      "type": "directory",
+      "content": null,
+      "path": "/subfolder 2"
+    }
+  ],
+  "type": "directory",
+  "content": null,
+  "path": "/"
+}

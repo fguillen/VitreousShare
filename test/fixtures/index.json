@@ -2,7 +2,7 @@
   "title": "folder_structure",
   "elements": [
     {
-      "jpg": "/file 1.jpg",
+      "jpg": null,
       "title": "file 1",
       "txt": "file content",
       "txts": [
@@ -16,11 +16,11 @@
       "link": "/file-1",
       "txt_thumb": "file content",
       "jpgs": [
-        "/file 1.jpg"
+        null
       ]
     },
     {
-      "jpg": "/subfolder 1.jpg",
+      "jpg": null,
       "title": "subfolder 1",
       "txt": "file content",
       "txts": [
@@ -28,7 +28,7 @@
       ],
       "elements": [
         {
-          "jpg": "/subfolder 1/file 1.jpg",
+          "jpg": null,
           "title": "file 1",
           "txt": "file content",
           "txts": [
@@ -40,11 +40,11 @@
           "type": "item",
           "link": "/subfolder-1/file-1",
           "jpgs": [
-            "/subfolder 1/file 1.jpg"
+            null
           ]
         },
         {
-          "jpg": "/subfolder 1/file 2.jpg",
+          "jpg": null,
           "title": "file 2",
           "txt": "file content",
           "txts": [
@@ -56,7 +56,7 @@
           "type": "item",
           "link": "/subfolder-1/file-2",
           "jpgs": [
-            "/subfolder 1/file 2.jpg"
+            null
           ]
         },
         {
@@ -82,7 +82,7 @@
       "type": "collection",
       "link": "/subfolder-1",
       "jpgs": [
-        "/subfolder 1.jpg"
+        null
       ]
     },
     {

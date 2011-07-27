@@ -29,7 +29,7 @@ class IndexerUtilsTest < Test::Unit::TestCase
   end
   
   def test_grouping
-    structure = JSON.load( File.read( "#{FIXTURES_PATH}/structure.json" ) )
+    structure = JSON.load( File.read( "#{FIXTURES_PATH}/dropbox_structure.json" ) )
     
     groups = Vitreous::Share::IndexerUtils.grouping( structure['elements'] )
     assert_equal( 3, groups.size )
@@ -41,28 +41,31 @@ class IndexerUtilsTest < Test::Unit::TestCase
         "type"    => "file",
         "content" => nil,
         "path"    => "/folder 1.jpg",
+        "uri"     => "http://dropbox.com/user/folder 1.jpg",
         "name"    => "folder 1.jpg"
       },
       {
         "type"    => "file",
         "content" => "file content",
         "path"    => "/folder 1.txt",
+        "uri"     => "http://dropbox.com/user/folder 1.txt",
         "name"    => "folder 1.txt"
       },
       {
         "type"    => "directory",
         "content" => nil,
         "path"    => "/folder 1",
+        "uri"     => "http://dropbox.com/user/folder 1",
         "name"    => "folder 1"
       }
     ]
     
     meta = Vitreous::Share::IndexerUtils.meta( structure )
     
-    assert_equal( "/folder 1.jpg", meta['jpg'] )
+    assert_equal( "http://dropbox.com/user/folder 1.jpg", meta['jpg'] )
     assert_equal( "file content",   meta['txt'] )
     assert_equal( ["file content"], meta['txts'] )
-    assert_equal( ["/folder 1.jpg"], meta['jpgs'] )
+    assert_equal( ["http://dropbox.com/user/folder 1.jpg"], meta['jpgs'] )
   end
   
   def test_meta_arrays
