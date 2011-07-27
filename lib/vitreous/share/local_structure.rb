@@ -24,10 +24,10 @@ module Vitreous
       end
       
       def uri( path )
-        "#{base_uri}#{path.gsub( @path, '' )}"
+        "#{Vitreous::Share::LocalStructure.base_uri}#{path.gsub( @path, '' )}"
       end
       
-      def base_uri
+      def self.base_uri
         ""
       end
     end
