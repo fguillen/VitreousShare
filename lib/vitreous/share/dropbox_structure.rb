@@ -6,9 +6,10 @@ module Vitreous
         @session  = session
       end
       
-      def generate( path = @path )
+      def generate
+        path = @path
         {
-          'name'     => File.basename( path ),
+          'name'     => File.basename( File.dirname( path ) ),
           'path'     => '/',
           'uri'      => uri( path ),
           'type'     => 'directory',

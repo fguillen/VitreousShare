@@ -8,7 +8,7 @@ module Vitreous
       
       def generate( path = @path )
         {
-          'name'     => File.basename( path ),
+          'name'     => path == @path ? File.basename( File.dirname( path ) ) : File.basename( path ),
           'path'     => path == @path ? '/' : path.gsub( @path, '' ),
           'uri'      => uri( path ),
           'type'     => File.directory?( path ) ? 'directory' : 'file',

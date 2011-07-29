@@ -3,7 +3,7 @@ require 'dummy_dropbox'
 
 class DropboxStructureTest < Test::Unit::TestCase
   def setup
-    DummyDropbox.root_path = FIXTURES_PATH
+    DummyDropbox.root_path = File.dirname(__FILE__)
     @session = ::Dropbox::Session.new( 'key', 'secret' )
     
     # @session = 
@@ -19,7 +19,7 @@ class DropboxStructureTest < Test::Unit::TestCase
     
     structure =
       Vitreous::Share::DropboxStructure.new( 
-        "/folder_structure",
+        "/fixtures/folder_structure",
         @session
       )
       
