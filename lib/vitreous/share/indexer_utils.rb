@@ -1,12 +1,16 @@
 module Vitreous
   module Share
     module IndexerUtils
-      def self.file_name_to_title( file_name )
-        remove_extensions( file_name ).gsub( /^\d*(_|\s)/, '' )
+      def self.to_title( string )
+        remove_digits( remove_extensions( string ) )
       end
       
-      def self.remove_extensions( file_name )
-        File.basename( file_name ).gsub( /\..*$/, '' )
+      def self.remove_digits( string )
+        string.gsub( /^\d*[_|\s]/, '' )
+      end
+      
+      def self.remove_extensions( string )
+        File.basename( string ).gsub( /\..*$/, '' )
       end
       
       def self.to_link( path )
@@ -18,7 +22,7 @@ module Vitreous
       end
       
       def self.to_slug( string )
-        string.
+        to_title( string ).
           downcase.
           gsub(/[^a-z0-9 -_]/,"").
           gsub('_', '-').
@@ -27,7 +31,7 @@ module Vitreous
       
       def self.grouping( elements )
         elements.group_by do |e| 
-          to_slug( remove_extensions( e['name'] ) )
+          to_slug( e['name'] )
         end
       end
       

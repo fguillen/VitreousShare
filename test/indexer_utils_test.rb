@@ -1,25 +1,33 @@
+# encoding: UTF-8
 require File.expand_path( "#{File.dirname(__FILE__)}/test_helper" )
 
 class IndexerUtilsTest < Test::Unit::TestCase
+
+  def test_to_title
+    assert_equal( 
+      'Pepe y Juán', 
+      Vitreous::Share::IndexerUtils.to_title( '001 Pepe y Juán.txt' )
+    )
+  end
   
   def test_to_slug
     assert_equal( 
       'pepe-y-jun', 
-      Vitreous::Share::IndexerUtils.to_slug( 'pepe y juán' )
+      Vitreous::Share::IndexerUtils.to_slug( '001 pepe y juán.txt' )
     )
   end
   
   def test_remove_extensions
     assert_equal( 
-      'pepe y juán', 
-      Vitreous::Share::IndexerUtils.remove_extensions( 'pepe y juán.thumb.jpg' )
+      '001 pepe y juán', 
+      Vitreous::Share::IndexerUtils.remove_extensions( '001 pepe y juán.thumb.jpg' )
     )    
   end
   
   def test_to_link
     assert_equal( 
       '/path-1/path-2/my-file', 
-      Vitreous::Share::IndexerUtils.to_link( '/Path 1/Path 2/My File.thumb.jpg' )
+      Vitreous::Share::IndexerUtils.to_link( '/01 Path 1/01 Path 2/01 My File.thumb.jpg' )
     )
     
     assert_equal( 

@@ -13,6 +13,6 @@ class ElementTest < Test::Unit::TestCase
     assert_equal( 1, element.items.size )
     assert_equal( 2, element.collections.size )
     
-    assert_equal( '/file-1', element.elements.first.link )
+    assert_equal( '/subfolder-1', element.elements.first.link )
   end
 end
