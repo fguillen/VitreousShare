@@ -13,7 +13,7 @@ module Vitreous
           'uri'      => uri( path ),
           'type'     => File.directory?( path ) ? 'directory' : 'file',
           'elements' => File.directory?( path ) ? tree( path ) : [],
-          'content'  => CommonStructure.txt?( path ) ? File.read( path ) : nil
+          'content'  => CommonStructure.txt?( path ) ? File.read( path ).force_encoding('utf-8') : nil
         }
       end
       

@@ -26,7 +26,7 @@ module Vitreous
             'uri'      => uri( e.path ),
             'type'     => e.directory? ? 'directory' : 'file',
             'elements' => e.directory? ? tree( e.path ) : [],
-            'content'  => CommonStructure.txt?( e.path ) ? @session.download( e.path ) : nil
+            'content'  => CommonStructure.txt?( e.path ) ? @session.download( e.path ).force_encoding('utf-8') : nil
           }
         end
       end
