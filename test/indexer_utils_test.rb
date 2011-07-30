@@ -16,6 +16,11 @@ class IndexerUtilsTest < Test::Unit::TestCase
       'pepe-y-jun', 
       Vitreous::Share::IndexerUtils.to_slug( '001 pepe y juán.txt' )
     )
+    
+    assert_equal( 
+      'pepe-y-jun', 
+      Vitreous::Share::IndexerUtils.to_slug( '001 ¿pepe y juán?.txt' )
+    )
   end
   
   def test_remove_extensions
@@ -34,6 +39,11 @@ class IndexerUtilsTest < Test::Unit::TestCase
     assert_equal( 
       '/', 
       Vitreous::Share::IndexerUtils.to_link( '/' )
+    )
+    
+    assert_equal( 
+      '/path-1/path-2/my-file', 
+      Vitreous::Share::IndexerUtils.to_link( '/01 Path 1/01 Path 2/01 ¿My File?.thumb.jpg' )
     )
   end
   

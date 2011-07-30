@@ -24,7 +24,7 @@ module Vitreous
       def self.to_slug( string )
         to_title( string ).
           downcase.
-          gsub(/[^a-z0-9 -_]/,"").
+          gsub(/[^a-z0-9 \-_]/,"").
           gsub('_', '-').
           gsub(/[ ]+/,"-")
       end
