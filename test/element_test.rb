@@ -15,4 +15,36 @@ class ElementTest < Test::Unit::TestCase
     
     assert_equal( '/subfolder-1', element.elements.first.link )
   end
+  
+  def test_render
+    element_hash = {
+      "title"     => "the title",
+      "link"      => "the link",
+      "jpg"       => "the jpg",
+      "txt"       => "the txt"
+    } 
+    
+    element = Vitreous::Share::Element.new( element_hash )
+    
+    result = 
+      Mustache.render(
+        "{{#element}}{{title}} | {{link}} | {{jpg}} | {{txt}}{{/element}}",
+        { :element  => element }
+      )
+    
+    assert_equal( 'the title | the link | the jpg | the txt', result )
+  end
+  
+  def test_to_md
+    element_hash = { "txt" => "Eo! MarkDown *rules*." } 
+    element = Vitreous::Share::Element.new( element_hash )
+    
+    result = 
+      Mustache.render(
+        "{{#element}}{{#to_md}}{{txt}}{{/to_md}}{{/element}}",
+        { :element  => element }
+      )
+      
+    assert_equal( "<p>Eo! MarkDown <em>rules</em>.</p>\n", result )
+  end
 end

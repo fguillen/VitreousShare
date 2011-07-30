@@ -33,6 +33,10 @@ module Vitreous
       def items
         @hash['elements'].select { |e| e['type'] == 'item' }.map { |e| Element.new( e ) }
       end
+      
+      def to_md( text )
+        RDiscount.new( render( text ) ).to_html
+      end
     end
   end
 end
