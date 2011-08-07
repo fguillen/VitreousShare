@@ -98,9 +98,13 @@ class IndexerUtilsTest < Test::Unit::TestCase
     extension_properties = Vitreous::Share::IndexerUtils.extension_properties( structure )
     
     assert_equal( "http://dropbox.com/user/folder 1.jpg", extension_properties['jpg'] )
-    assert_equal( "file content",   extension_properties['txt'] )
+    assert_equal( "file content", extension_properties['txt'] )
     assert_equal( ["file content"], extension_properties['txts'] )
     assert_equal( ["http://dropbox.com/user/folder 1.jpg"], extension_properties['jpgs'] )
+
+    # file/description
+    assert_equal( "http://dropbox.com/user/folder 1.jpg", extension_properties['file'] )
+    assert_equal( "file content", extension_properties['description'] )
     
     # meta
     assert_equal( "This is my new title", extension_properties['meta']['title'] )

@@ -15,10 +15,18 @@
           "elements": [
 
           ],
+          "file": "wadus uri",
           "jpg": "wadus uri",
+          "description": "file content",
           "txt": "file content",
+          "files": [
+            "wadus uri"
+          ],
           "jpgs": [
             "wadus uri"
+          ],
+          "descriptions": [
+            "file content"
           ],
           "txts": [
             "file content"
@@ -31,10 +39,18 @@
           "elements": [
 
           ],
+          "file": "wadus uri",
           "jpg": "wadus uri",
+          "description": "file content",
           "txt": "file content",
+          "files": [
+            "wadus uri"
+          ],
           "jpgs": [
             "wadus uri"
+          ],
+          "descriptions": [
+            "file content"
           ],
           "txts": [
             "file content"
@@ -52,7 +68,11 @@
               "elements": [
 
               ],
+              "description": "file content",
               "txt": "file content",
+              "descriptions": [
+                "file content"
+              ],
               "txts": [
                 "file content"
               ]
@@ -60,10 +80,18 @@
           ]
         }
       ],
+      "file": "wadus uri",
       "jpg": "wadus uri",
+      "description": "file content",
       "txt": "file content",
+      "files": [
+        "wadus uri"
+      ],
       "jpgs": [
         "wadus uri"
+      ],
+      "descriptions": [
+        "file content"
       ],
       "txts": [
         "file content"
@@ -81,7 +109,11 @@
           "elements": [
 
           ],
+          "description": "file content",
           "txt": "file content",
+          "descriptions": [
+            "file content"
+          ],
           "txts": [
             "file content"
           ]
@@ -95,6 +127,7 @@
       "elements": [
 
       ],
+      "file": "wadus uri",
       "jpg": "wadus uri",
       "meta": {
         "title": "This is my new title",
@@ -102,8 +135,12 @@
         "price": 10,
         "summary": "This is a summary\ntwo lines long\n"
       },
+      "description": "file content",
       "txt_thumb": "file content",
       "txt": "file content",
+      "files": [
+        "wadus uri"
+      ],
       "jpgs": [
         "wadus uri"
       ],
@@ -114,6 +151,9 @@
           "price": 10,
           "summary": "This is a summary\ntwo lines long\n"
         }
+      ],
+      "descriptions": [
+        "file content"
       ],
       "txts": [
         "file content",
