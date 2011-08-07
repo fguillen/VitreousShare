@@ -35,7 +35,7 @@ module Vitreous
         end
       end
       
-      def self.extension_properties( elements )
+      def self.meta_properties( elements )
         result = {}
         
         elements.select { |e| e['type'] == 'file' }.each do |e|
@@ -54,10 +54,10 @@ module Vitreous
         end
         
         # create arrays of metas
-        result.merge!( extension_arrays( result ) )
+        result.merge!( meta_arrays( result ) )
       end
       
-      def self.extension_arrays( meta )
+      def self.meta_arrays( meta )
         result = {}
         
         meta.each do |k,v|

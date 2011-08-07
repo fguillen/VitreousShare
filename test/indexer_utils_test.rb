@@ -54,7 +54,7 @@ class IndexerUtilsTest < Test::Unit::TestCase
     assert_equal( 3, groups.size )
   end
   
-  def test_extension_properties
+  def test_meta_properties
     meta = <<-EOS
       title: This is my new title
       collection: collection1
@@ -95,26 +95,26 @@ class IndexerUtilsTest < Test::Unit::TestCase
       }
     ]
     
-    extension_properties = Vitreous::Share::IndexerUtils.extension_properties( structure )
+    meta_properties = Vitreous::Share::IndexerUtils.meta_properties( structure )
     
-    assert_equal( "http://dropbox.com/user/folder 1.jpg", extension_properties['jpg'] )
-    assert_equal( "file content", extension_properties['txt'] )
-    assert_equal( ["file content"], extension_properties['txts'] )
-    assert_equal( ["http://dropbox.com/user/folder 1.jpg"], extension_properties['jpgs'] )
+    assert_equal( "http://dropbox.com/user/folder 1.jpg", meta_properties['jpg'] )
+    assert_equal( "file content", meta_properties['txt'] )
+    assert_equal( ["file content"], meta_properties['txts'] )
+    assert_equal( ["http://dropbox.com/user/folder 1.jpg"], meta_properties['jpgs'] )
 
     # file/description
-    assert_equal( "http://dropbox.com/user/folder 1.jpg", extension_properties['file'] )
-    assert_equal( "file content", extension_properties['description'] )
+    assert_equal( "http://dropbox.com/user/folder 1.jpg", meta_properties['file'] )
+    assert_equal( "file content", meta_properties['description'] )
     
     # meta
-    assert_equal( "This is my new title", extension_properties['meta']['title'] )
-    assert_equal( "collection1", extension_properties['meta']['collection'] )
-    assert_equal( 10, extension_properties['meta']['price'] )
-    assert_equal( "This is a summary\ntwo lines long\n", extension_properties['meta']['summary'] )
+    assert_equal( "This is my new title", meta_properties['meta']['title'] )
+    assert_equal( "collection1", meta_properties['meta']['collection'] )
+    assert_equal( 10, meta_properties['meta']['price'] )
+    assert_equal( "This is a summary\ntwo lines long\n", meta_properties['meta']['summary'] )
   end
   
-  def test_extension_arrays
-    extension_properties = {
+  def test_meta_arrays
+    meta_properties = {
       'jpg'   => 'jpg',
       'jpg_0' => 'jpg 0',
       'jpg_1' => 'jpg 1',
@@ -122,9 +122,9 @@ class IndexerUtilsTest < Test::Unit::TestCase
       'txt_0' => 'txt 0'
     }
 
-    extension_arrays = Vitreous::Share::IndexerUtils.extension_arrays( extension_properties )
+    meta_arrays = Vitreous::Share::IndexerUtils.meta_arrays( meta_properties )
         
-    assert_equal( ["txt", "txt 0"], extension_arrays['txts'] )
-    assert_equal( ["jpg", "jpg 0", "jpg 1"], extension_arrays['jpgs'] )
+    assert_equal( ["txt", "txt 0"], meta_arrays['txts'] )
+    assert_equal( ["jpg", "jpg 0", "jpg 1"], meta_arrays['jpgs'] )
   end
 end
