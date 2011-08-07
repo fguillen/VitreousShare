@@ -35,25 +35,27 @@ module Vitreous
         end
       end
       
-      def self.meta( elements )
+      def self.extension_properties( elements )
         result = {}
         
         elements.select { |e| e['type'] == 'file' }.each do |e|
-          ext_name      = File.basename( e['path'] ).split( '.' )[-1]
-          meta_ext_name = File.basename( e['path'] ).split( '.' )[1..-1].reverse.join( '_' )
+          ext_name       = File.basename( e['path'] ).split( '.' )[-1]
+          multi_ext_name = File.basename( e['path'] ).split( '.' )[1..-1].reverse.join( '_' )
           
-          if( ext_name =~ Vitreous::TXT_EXTENSIONS )
-            result[meta_ext_name] = e['content']
+          if( ext_name == 'meta' )
+            result[multi_ext_name] = YAML.load( e['content'] )
+          elsif( ext_name =~ Vitreous::TXT_EXTENSIONS )
+            result[multi_ext_name] = e['content']
           else
-            result[meta_ext_name] = e['uri']
+            result[multi_ext_name] = e['uri']
           end
         end
         
         # create arrays of metas
-        result.merge!( meta_arrays( result ) )
+        result.merge!( extension_arrays( result ) )
       end
       
-      def self.meta_arrays( meta )
+      def self.extension_arrays( meta )
         result = {}
         
         meta.each do |k,v|

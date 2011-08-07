@@ -12,7 +12,7 @@ module Vitreous
             'link'     => Vitreous::Share::IndexerUtils.to_link( e[0]['path'] ),
             'type'     => e.any? { |e2| e2['type'] == 'directory' } ? 'collection' : 'item',
             'elements' => generate( e[0]['elements'].sort { |x, y| x['name'] <=> y['name'] } )
-          }.merge( Vitreous::Share::IndexerUtils.meta( e ) )
+          }.merge( Vitreous::Share::IndexerUtils.extension_properties( e ) )
         end
       end
       

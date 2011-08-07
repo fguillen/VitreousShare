@@ -96,10 +96,24 @@
 
       ],
       "jpg": "wadus uri",
+      "meta": {
+        "title": "This is my new title",
+        "collection": "collection1",
+        "price": 10,
+        "summary": "This is a summary\ntwo lines long\n"
+      },
       "txt_thumb": "file content",
       "txt": "file content",
       "jpgs": [
         "wadus uri"
+      ],
+      "metas": [
+        {
+          "title": "This is my new title",
+          "collection": "collection1",
+          "price": 10,
+          "summary": "This is a summary\ntwo lines long\n"
+        }
       ],
       "txts": [
         "file content",

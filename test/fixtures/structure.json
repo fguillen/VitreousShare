@@ -1,146 +1,156 @@
 {
   "name": "fixtures",
+  "path": "/",
   "uri": "wadus uri",
+  "type": "directory",
   "elements": [
     {
       "name": "01 subfolder 1",
+      "path": "/01 subfolder 1",
       "uri": "wadus uri",
+      "type": "directory",
       "elements": [
         {
           "name": "001 bbb.jpg",
+          "path": "/01 subfolder 1/001 bbb.jpg",
           "uri": "wadus uri",
+          "type": "file",
           "elements": [
 
           ],
-          "type": "file",
-          "content": null,
-          "path": "/01 subfolder 1/001 bbb.jpg"
+          "content": null
         },
         {
           "name": "001 bbb.txt",
+          "path": "/01 subfolder 1/001 bbb.txt",
           "uri": "wadus uri",
+          "type": "file",
           "elements": [
 
           ],
-          "type": "file",
-          "content": "file content",
-          "path": "/01 subfolder 1/001 bbb.txt"
+          "content": "file content"
         },
         {
           "name": "002 aaa.jpg",
+          "path": "/01 subfolder 1/002 aaa.jpg",
           "uri": "wadus uri",
+          "type": "file",
           "elements": [
 
           ],
-          "type": "file",
-          "content": null,
-          "path": "/01 subfolder 1/002 aaa.jpg"
+          "content": null
         },
         {
           "name": "002 aaa.txt",
+          "path": "/01 subfolder 1/002 aaa.txt",
           "uri": "wadus uri",
+          "type": "file",
           "elements": [
 
           ],
-          "type": "file",
-          "content": "file content",
-          "path": "/01 subfolder 1/002 aaa.txt"
+          "content": "file content"
         },
         {
           "name": "subsubfolder 1",
+          "path": "/01 subfolder 1/subsubfolder 1",
           "uri": "wadus uri",
+          "type": "directory",
           "elements": [
             {
               "name": "file 1.txt",
+              "path": "/01 subfolder 1/subsubfolder 1/file 1.txt",
               "uri": "wadus uri",
+              "type": "file",
               "elements": [
 
               ],
-              "type": "file",
-              "content": "file content",
-              "path": "/01 subfolder 1/subsubfolder 1/file 1.txt"
+              "content": "file content"
             }
           ],
-          "type": "directory",
-          "content": null,
-          "path": "/01 subfolder 1/subsubfolder 1"
+          "content": null
         }
       ],
-      "type": "directory",
-      "content": null,
-      "path": "/01 subfolder 1"
+      "content": null
     },
     {
       "name": "01 subfolder 1.jpg",
+      "path": "/01 subfolder 1.jpg",
       "uri": "wadus uri",
+      "type": "file",
       "elements": [
 
       ],
-      "type": "file",
-      "content": null,
-      "path": "/01 subfolder 1.jpg"
+      "content": null
     },
     {
       "name": "01 subfolder 1.txt",
+      "path": "/01 subfolder 1.txt",
       "uri": "wadus uri",
+      "type": "file",
       "elements": [
 
       ],
-      "type": "file",
-      "content": "file content",
-      "path": "/01 subfolder 1.txt"
+      "content": "file content"
     },
     {
       "name": "02 subfolder 2",
+      "path": "/02 subfolder 2",
       "uri": "wadus uri",
+      "type": "directory",
       "elements": [
         {
           "name": "file 1.txt",
+          "path": "/02 subfolder 2/file 1.txt",
           "uri": "wadus uri",
+          "type": "file",
           "elements": [
 
           ],
-          "type": "file",
-          "content": "file content",
-          "path": "/02 subfolder 2/file 1.txt"
+          "content": "file content"
         }
       ],
-      "type": "directory",
-      "content": null,
-      "path": "/02 subfolder 2"
+      "content": null
     },
     {
       "name": "file 1.jpg",
+      "path": "/file 1.jpg",
       "uri": "wadus uri",
+      "type": "file",
       "elements": [
 
       ],
+      "content": null
+    },
+    {
+      "name": "file 1.meta",
+      "path": "/file 1.meta",
+      "uri": "wadus uri",
       "type": "file",
-      "content": null,
-      "path": "/file 1.jpg"
+      "elements": [
+
+      ],
+      "content": "title: This is my new title\ncollection: collection1\nprice: 10\nsummary: |\n  This is a summary\n  two lines long\n"
     },
     {
       "name": "file 1.thumb.txt",
+      "path": "/file 1.thumb.txt",
       "uri": "wadus uri",
+      "type": "file",
       "elements": [
 
       ],
-      "type": "file",
-      "content": "file content",
-      "path": "/file 1.thumb.txt"
+      "content": "file content"
     },
     {
       "name": "file 1.txt",
+      "path": "/file 1.txt",
       "uri": "wadus uri",
+      "type": "file",
       "elements": [
 
       ],
-      "type": "file",
-      "content": "file content",
-      "path": "/file 1.txt"
+      "content": "file content"
     }
   ],
-  "type": "directory",
-  "content": null,
-  "path": "/"
+  "content": null
 }

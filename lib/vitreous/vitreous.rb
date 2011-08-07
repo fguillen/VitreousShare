@@ -1,3 +1,3 @@
 module Vitreous
-  TXT_EXTENSIONS = /^(txt|md|html|meta)$/ 
+  TXT_EXTENSIONS = /^(txt|text|md|html|meta)$/ 
 end
