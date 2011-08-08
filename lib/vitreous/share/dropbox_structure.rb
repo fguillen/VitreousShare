@@ -22,7 +22,7 @@ module Vitreous
         @session.entry( path ).list.to_a.map do |e|
           {
             'name'     => File.basename( e.path ),
-            'path'     => e.path.gsub( @path, '' ),
+            'path'     => e.path.gsub( /#{@path}/i, '' ),
             'uri'      => uri( e.path ),
             'type'     => e.directory? ? 'directory' : 'file',
             'elements' => e.directory? ? tree( e.path ) : [],

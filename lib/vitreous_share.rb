@@ -2,6 +2,7 @@ require 'json'
 require 'dropbox'
 require 'mustache'
 require 'rdiscount'
+require 'ostruct'
 
 require "#{File.dirname(__FILE__)}/vitreous/vitreous"
 require "#{File.dirname(__FILE__)}/vitreous/share/indexer_utils"

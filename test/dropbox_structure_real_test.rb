@@ -13,7 +13,7 @@
 #   def test_generate
 #     structure =
 #       Vitreous::Share::DropboxStructure.new( 
-#         "/Public/XXX5/website",
+#         "/Public/Vitreous FAQ Spanish/website",
 #         @session
 #       )
 #       
