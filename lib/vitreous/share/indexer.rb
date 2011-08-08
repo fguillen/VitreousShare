@@ -5,19 +5,34 @@ module Vitreous
         @structure = structure
       end
       
-      def generate( structure = [@structure] )
+      def generate
+        structure = @structure
+        
+        {
+          'title'    => Vitreous::Share::IndexerUtils.to_title( structure['name'] ),
+          'link'     => Vitreous::Share::IndexerUtils.to_link( structure['path'] ),
+          'type'     => 'collection',
+          'elements' => tree( structure['elements'].select { |e| !(e['name'] =~ /^_root\./) }.sort { |x, y| x['name'] <=> y['name'] } )
+        }.merge( 
+          Vitreous::Share::IndexerUtils.meta_properties(
+            structure['elements'].select { |e| e['name'] =~ /^_root\./ } 
+          )
+        )
+      end
+      
+      def tree( structure )
         Vitreous::Share::IndexerUtils.grouping( structure ).values.map do |e|
           {
             'title'    => Vitreous::Share::IndexerUtils.to_title( e[0]['name'] ),
             'link'     => Vitreous::Share::IndexerUtils.to_link( e[0]['path'] ),
             'type'     => e.any? { |e2| e2['type'] == 'directory' } ? 'collection' : 'item',
-            'elements' => generate( e[0]['elements'].sort { |x, y| x['name'] <=> y['name'] } )
+            'elements' => tree( e[0]['elements'].sort { |x, y| x['name'] <=> y['name'] } )
           }.merge( Vitreous::Share::IndexerUtils.meta_properties( e ) )
         end
       end
       
       def json
-        JSON.pretty_generate( generate[0] )
+        JSON.pretty_generate( generate )
       end
     end
   end

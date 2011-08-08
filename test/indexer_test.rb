@@ -7,7 +7,11 @@ class IndexerTest < Test::Unit::TestCase
         JSON.load( File.read( "#{FIXTURES_PATH}/structure.json" ) )
       )
     
-    assert( indexer.generate.is_a? Array )
+    index = indexer.generate
+        
+    assert( index.is_a? Hash )
+    assert_equal( 'fixtures', index['title'] )
+    assert_equal( '/', index['link'] )
   end
   
   def test_json

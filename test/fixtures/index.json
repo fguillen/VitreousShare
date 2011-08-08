@@ -160,5 +160,21 @@
         "file content"
       ]
     }
+  ],
+  "file": "wadus uri",
+  "jpg": "wadus uri",
+  "description": "root content",
+  "txt": "root content",
+  "files": [
+    "wadus uri"
+  ],
+  "jpgs": [
+    "wadus uri"
+  ],
+  "descriptions": [
+    "root content"
+  ],
+  "txts": [
+    "root content"
   ]
 }
