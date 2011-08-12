@@ -45,10 +45,18 @@ module Vitreous
           if( ext_name == 'meta' )
             result[multi_ext_name] = YAML.load( e['content'] )
           elsif( ext_name =~ Vitreous::TXT_EXTENSIONS )
+            # wildcard
             result['description'] ||= e['content']
+            result['descriptions'] ||= []
+            result['descriptions'] << e['content']
+            
             result[multi_ext_name] = e['content']
           else
+            # wildcard
             result['file'] ||= e['uri']
+            result['files'] ||= []
+            result['files'] << e['uri']
+            
             result[multi_ext_name] = e['uri']
           end
         end
@@ -60,9 +68,9 @@ module Vitreous
       def self.meta_arrays( meta )
         result = {}
         
-        meta.each do |k,v|
+        meta.select { |k,v| !['meta', 'description', 'descriptions', 'file', 'files'].include? k }.each do |k,v|
           key = "#{k.split('_')[0]}s"
-          result[key] = []  unless result[key]
+          result[key] ||= []
           result[key] << v
         end
         
@@ -71,6 +79,10 @@ module Vitreous
         end
         
         return result
+      end
+      
+      def self.meta_wildcards( meta )
+        
       end
     end
   end
