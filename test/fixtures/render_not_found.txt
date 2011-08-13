@@ -1,0 +1,13 @@
+assets: /assets_path
+
+    collection: subfolder 1
+      item: bbb
+      item: aaa
+    collection: subfolder 2
+      item: file 1
+
+    item title: Not found
+    item jpg: wadus uri
+    item txt: This is the not found item
+    item description: This is the not found item
+    item file: wadus uri

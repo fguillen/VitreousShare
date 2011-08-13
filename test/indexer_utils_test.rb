@@ -51,7 +51,7 @@ class IndexerUtilsTest < Test::Unit::TestCase
     structure = JSON.load( File.read( "#{FIXTURES_PATH}/structure.json" ) )
     
     groups = Vitreous::Share::IndexerUtils.grouping( structure['elements'] )
-    assert_equal( 4, groups.size )
+    assert_equal( 5, groups.size )
   end
   
   def test_meta_properties

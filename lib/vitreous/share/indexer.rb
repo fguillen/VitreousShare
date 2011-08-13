@@ -9,10 +9,11 @@ module Vitreous
         structure = @structure
         
         {
-          'title'    => Vitreous::Share::IndexerUtils.to_title( structure['name'] ),
-          'link'     => Vitreous::Share::IndexerUtils.to_link( structure['path'] ),
-          'type'     => 'collection',
-          'elements' => tree( structure['elements'].select { |e| !(e['name'] =~ /^_root\./) }.sort { |x, y| x['name'] <=> y['name'] } )
+          'not_found' => generate_not_found( structure ),
+          'title'     => Vitreous::Share::IndexerUtils.to_title( structure['name'] ),
+          'link'      => Vitreous::Share::IndexerUtils.to_link( structure['path'] ),
+          'type'      => 'collection',
+          'elements'  => tree( structure['elements'].select { |e| !(e['name'] =~ /^_/) }.sort { |x, y| x['name'] <=> y['name'] } )
         }.merge( 
           Vitreous::Share::IndexerUtils.meta_properties(
             structure['elements'].select { |e| e['name'] =~ /^_root\./ } 
@@ -29,6 +30,20 @@ module Vitreous
             'elements' => tree( e[0]['elements'].sort { |x, y| x['name'] <=> y['name'] } )
           }.merge( Vitreous::Share::IndexerUtils.meta_properties( e ) )
         end
+      end
+      
+      def generate_not_found( structure )
+        {
+          'title'       => 'Not found',
+          'type'        => 'item',
+          'elements'    => [],
+          'txt'         => 'Not found',
+          'description' => 'Not found'
+        }.merge( 
+          Vitreous::Share::IndexerUtils.meta_properties(
+            structure['elements'].select { |e| e['name'] =~ /^_not_found\./ } 
+          )
+        )
       end
       
       def json

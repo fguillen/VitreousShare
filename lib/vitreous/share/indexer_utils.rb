@@ -80,10 +80,6 @@ module Vitreous
         
         return result
       end
-      
-      def self.meta_wildcards( meta )
-        
-      end
     end
   end
 end

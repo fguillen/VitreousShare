@@ -1,0 +1,19 @@
+assets: {{assets}}
+
+{{#index}}
+  {{#collections}}
+    collection: {{title}}
+    {{#items}}
+      item: {{title}}
+    {{/items}}
+  {{/collections}}
+{{/index}}
+
+{{#element}}
+  {{#collection?}}
+    {{>collection}}
+  {{/collection?}}
+  {{#item?}}
+    {{>item}}
+  {{/item?}}
+{{/element}}

@@ -112,6 +112,26 @@
       "content": null
     },
     {
+      "name": "_not_found.jpg",
+      "path": "/_not_found.jpg",
+      "uri": "wadus uri",
+      "type": "file",
+      "elements": [
+
+      ],
+      "content": null
+    },
+    {
+      "name": "_not_found.txt",
+      "path": "/_not_found.txt",
+      "uri": "wadus uri",
+      "type": "file",
+      "elements": [
+
+      ],
+      "content": "This is the not found item"
+    },
+    {
       "name": "_root.jpg",
       "path": "/_root.jpg",
       "uri": "wadus uri",

@@ -1,4 +1,27 @@
 {
+  "not_found": {
+    "title": "Not found",
+    "type": "item",
+    "elements": [
+
+    ],
+    "txt": "This is the not found item",
+    "description": "This is the not found item",
+    "file": "wadus uri",
+    "files": [
+      "wadus uri"
+    ],
+    "jpg": "wadus uri",
+    "descriptions": [
+      "This is the not found item"
+    ],
+    "jpgs": [
+      "wadus uri"
+    ],
+    "txts": [
+      "This is the not found item"
+    ]
+  },
   "title": "fixtures",
   "link": "/",
   "type": "collection",
