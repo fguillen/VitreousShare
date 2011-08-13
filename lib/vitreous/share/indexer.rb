@@ -37,8 +37,6 @@ module Vitreous
           'title'       => 'Not found',
           'type'        => 'item',
           'elements'    => [],
-          'txt'         => 'Not found',
-          'description' => 'Not found'
         }.merge( 
           Vitreous::Share::IndexerUtils.meta_properties(
             structure['elements'].select { |e| e['name'] =~ /^_not_found\./ } 
