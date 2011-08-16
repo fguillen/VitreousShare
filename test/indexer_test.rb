@@ -10,8 +10,8 @@ class IndexerTest < Test::Unit::TestCase
     index = indexer.generate
         
     assert( index.is_a? Hash )
-    assert_equal( 'fixtures', index['title'] )
-    assert_equal( '/', index['link'] )
+    assert_equal( 'fixtures', index['home']['title'] )
+    assert_equal( '/', index['home']['link'] )
   end
   
   def test_json

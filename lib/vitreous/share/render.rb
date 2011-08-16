@@ -2,12 +2,12 @@ module Vitreous
   module Share
     module Render
       def self.render( opts )
-        index   = Vitreous::Share::Element.new( opts[:index] )
-        element = Vitreous::Share::IndexSearcher.search( index, opts[:resource] )
+        home    = Vitreous::Share::Element.new( opts[:index]['home'] )
+        element = Vitreous::Share::IndexSearcher.search( home, opts[:resource] )
         status  = 200
         
         if element.nil?
-          element = Vitreous::Share::IndexSearcher.not_found( index )
+          element = Vitreous::Share::Element.new( opts[:index]['not_found'] )
           status  = 404
         end
   
@@ -17,7 +17,7 @@ module Vitreous
           Mustache.render(
             File.read( "#{opts[:templates]}/layout.html" ),
             { 
-              :index    => index, 
+              :home     => home, 
               :element  => element,
               :assets   => opts[:assets]
             }

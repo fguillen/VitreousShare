@@ -3,17 +3,17 @@ require File.expand_path( "#{File.dirname(__FILE__)}/test_helper" )
 class ElementTest < Test::Unit::TestCase
   def test_initialize
     index = JSON.load( File.read( "#{FIXTURES_PATH}/index.json" ) )
-    element = Vitreous::Share::Element.new( index )
+    home = Vitreous::Share::Element.new( index['home'] )
     
-    assert_equal( 'fixtures', element.title )
-    assert_equal( '/', element.link )
-    assert_equal( true, element.collection? )
-    assert_equal( false, element.item? )
-    assert_equal( 3, element.elements.size )
-    assert_equal( 1, element.items.size )
-    assert_equal( 2, element.collections.size )
+    assert_equal( 'fixtures', home.title )
+    assert_equal( '/', home.link )
+    assert_equal( true, home.collection? )
+    assert_equal( false, home.item? )
+    assert_equal( 3, home.elements.size )
+    assert_equal( 1, home.items.size )
+    assert_equal( 2, home.collections.size )
     
-    assert_equal( '/subfolder-1', element.elements.first.link )
+    assert_equal( '/subfolder-1', home.elements.first.link )
   end
   
   def test_render

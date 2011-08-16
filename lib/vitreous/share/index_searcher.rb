@@ -10,11 +10,7 @@ module Vitreous
         end
 
         return nil
-      end
-      
-      def self.not_found( index )
-        Vitreous::Share::Element.new( index.not_found )
-      end
+      end      
     end
   end
 end

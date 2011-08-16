@@ -44,6 +44,7 @@ module Vitreous
           
           if( ext_name == 'meta' )
             result[multi_ext_name] = YAML.load( e['content'] )
+            
           elsif( ext_name =~ Vitreous::TXT_EXTENSIONS )
             # wildcard
             result['description'] ||= e['content']
@@ -51,6 +52,7 @@ module Vitreous
             result['descriptions'] << e['content']
             
             result[multi_ext_name] = e['content']
+            
           else
             # wildcard
             result['file'] ||= e['uri']

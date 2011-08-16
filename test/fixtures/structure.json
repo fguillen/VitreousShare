@@ -112,6 +112,26 @@
       "content": null
     },
     {
+      "name": "_home.jpg",
+      "path": "/_home.jpg",
+      "uri": "wadus uri",
+      "type": "file",
+      "elements": [
+
+      ],
+      "content": null
+    },
+    {
+      "name": "_home.txt",
+      "path": "/_home.txt",
+      "uri": "wadus uri",
+      "type": "file",
+      "elements": [
+
+      ],
+      "content": "root content"
+    },
+    {
       "name": "_not_found.jpg",
       "path": "/_not_found.jpg",
       "uri": "wadus uri",
@@ -130,26 +150,6 @@
 
       ],
       "content": "This is the not found item"
-    },
-    {
-      "name": "_root.jpg",
-      "path": "/_root.jpg",
-      "uri": "wadus uri",
-      "type": "file",
-      "elements": [
-
-      ],
-      "content": null
-    },
-    {
-      "name": "_root.txt",
-      "path": "/_root.txt",
-      "uri": "wadus uri",
-      "type": "file",
-      "elements": [
-
-      ],
-      "content": "root content"
     },
     {
       "name": "file 1.jpg",

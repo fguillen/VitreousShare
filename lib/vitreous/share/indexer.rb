@@ -9,27 +9,22 @@ module Vitreous
         structure = @structure
         
         {
-          'not_found' => generate_not_found( structure ),
+          'home'      => generate_home( structure ),
+          'not_found' => generate_not_found( structure )
+        }
+      end
+        
+      def generate_home( structure )
+        {
           'title'     => Vitreous::Share::IndexerUtils.to_title( structure['name'] ),
-          'link'      => Vitreous::Share::IndexerUtils.to_link( structure['path'] ),
+          'link'      => '/',
           'type'      => 'collection',
           'elements'  => tree( structure['elements'].select { |e| !(e['name'] =~ /^_/) }.sort { |x, y| x['name'] <=> y['name'] } )
         }.merge( 
           Vitreous::Share::IndexerUtils.meta_properties(
-            structure['elements'].select { |e| e['name'] =~ /^_root\./ } 
+            structure['elements'].select { |e| e['name'] =~ /^_home\./ } 
           )
         )
-      end
-      
-      def tree( structure )
-        Vitreous::Share::IndexerUtils.grouping( structure ).values.map do |e|
-          {
-            'title'    => Vitreous::Share::IndexerUtils.to_title( e[0]['name'] ),
-            'link'     => Vitreous::Share::IndexerUtils.to_link( e[0]['path'] ),
-            'type'     => e.any? { |e2| e2['type'] == 'directory' } ? 'collection' : 'item',
-            'elements' => tree( e[0]['elements'].sort { |x, y| x['name'] <=> y['name'] } )
-          }.merge( Vitreous::Share::IndexerUtils.meta_properties( e ) )
-        end
       end
       
       def generate_not_found( structure )
@@ -44,6 +39,17 @@ module Vitreous
         )
       end
       
+      def tree( structure )
+        Vitreous::Share::IndexerUtils.grouping( structure ).values.map do |e|
+          {
+            'title'    => Vitreous::Share::IndexerUtils.to_title( e[0]['name'] ),
+            'link'     => Vitreous::Share::IndexerUtils.to_link( e[0]['path'] ),
+            'type'     => e.any? { |e2| e2['type'] == 'directory' } ? 'collection' : 'item',
+            'elements' => tree( e[0]['elements'].sort { |x, y| x['name'] <=> y['name'] } )
+          }.merge( Vitreous::Share::IndexerUtils.meta_properties( e ) )
+        end
+      end
+            
       def json
         JSON.pretty_generate( generate )
       end

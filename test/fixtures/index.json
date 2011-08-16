@@ -1,196 +1,198 @@
 {
+  "home": {
+    "title": "fixtures",
+    "link": "/",
+    "type": "collection",
+    "elements": [
+      {
+        "title": "subfolder 1",
+        "link": "/subfolder-1",
+        "type": "collection",
+        "elements": [
+          {
+            "title": "bbb",
+            "link": "/subfolder-1/bbb",
+            "type": "item",
+            "elements": [
+
+            ],
+            "file": "wadus uri",
+            "files": [
+              "wadus uri"
+            ],
+            "jpg": "wadus uri",
+            "description": "file content",
+            "descriptions": [
+              "file content"
+            ],
+            "txt": "file content",
+            "jpgs": [
+              "wadus uri"
+            ],
+            "txts": [
+              "file content"
+            ]
+          },
+          {
+            "title": "aaa",
+            "link": "/subfolder-1/aaa",
+            "type": "item",
+            "elements": [
+
+            ],
+            "file": "wadus uri",
+            "files": [
+              "wadus uri"
+            ],
+            "jpg": "wadus uri",
+            "description": "file content",
+            "descriptions": [
+              "file content"
+            ],
+            "txt": "file content",
+            "jpgs": [
+              "wadus uri"
+            ],
+            "txts": [
+              "file content"
+            ]
+          },
+          {
+            "title": "subsubfolder 1",
+            "link": "/subfolder-1/subsubfolder-1",
+            "type": "collection",
+            "elements": [
+              {
+                "title": "file 1",
+                "link": "/subfolder-1/subsubfolder-1/file-1",
+                "type": "item",
+                "elements": [
+
+                ],
+                "description": "file content",
+                "descriptions": [
+                  "file content"
+                ],
+                "txt": "file content",
+                "txts": [
+                  "file content"
+                ]
+              }
+            ]
+          }
+        ],
+        "file": "wadus uri",
+        "files": [
+          "wadus uri"
+        ],
+        "jpg": "wadus uri",
+        "description": "file content",
+        "descriptions": [
+          "file content"
+        ],
+        "txt": "file content",
+        "jpgs": [
+          "wadus uri"
+        ],
+        "txts": [
+          "file content"
+        ]
+      },
+      {
+        "title": "subfolder 2",
+        "link": "/subfolder-2",
+        "type": "collection",
+        "elements": [
+          {
+            "title": "file 1",
+            "link": "/subfolder-2/file-1",
+            "type": "item",
+            "elements": [
+
+            ],
+            "description": "file content",
+            "descriptions": [
+              "file content"
+            ],
+            "txt": "file content",
+            "txts": [
+              "file content"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "file 1",
+        "link": "/file-1",
+        "type": "item",
+        "elements": [
+
+        ],
+        "file": "wadus uri",
+        "files": [
+          "wadus uri"
+        ],
+        "jpg": "wadus uri",
+        "meta": {
+          "title": "This is my new title",
+          "collection": "collection1",
+          "price": 10,
+          "summary": "This is a summary\ntwo lines long\n"
+        },
+        "description": "file content",
+        "descriptions": [
+          "file content",
+          "file content"
+        ],
+        "txt_thumb": "file content",
+        "txt": "file content",
+        "jpgs": [
+          "wadus uri"
+        ],
+        "txts": [
+          "file content",
+          "file content"
+        ]
+      }
+    ],
+    "file": "wadus uri",
+    "files": [
+      "wadus uri"
+    ],
+    "jpg": "wadus uri",
+    "description": "root content",
+    "descriptions": [
+      "root content"
+    ],
+    "txt": "root content",
+    "jpgs": [
+      "wadus uri"
+    ],
+    "txts": [
+      "root content"
+    ]
+  },
   "not_found": {
     "title": "Not found",
     "type": "item",
     "elements": [
 
     ],
-    "txt": "This is the not found item",
-    "description": "This is the not found item",
     "file": "wadus uri",
     "files": [
       "wadus uri"
     ],
     "jpg": "wadus uri",
+    "description": "This is the not found item",
     "descriptions": [
       "This is the not found item"
     ],
+    "txt": "This is the not found item",
     "jpgs": [
       "wadus uri"
     ],
     "txts": [
       "This is the not found item"
     ]
-  },
-  "title": "fixtures",
-  "link": "/",
-  "type": "collection",
-  "elements": [
-    {
-      "title": "subfolder 1",
-      "link": "/subfolder-1",
-      "type": "collection",
-      "elements": [
-        {
-          "title": "bbb",
-          "link": "/subfolder-1/bbb",
-          "type": "item",
-          "elements": [
-
-          ],
-          "file": "wadus uri",
-          "files": [
-            "wadus uri"
-          ],
-          "jpg": "wadus uri",
-          "description": "file content",
-          "descriptions": [
-            "file content"
-          ],
-          "txt": "file content",
-          "jpgs": [
-            "wadus uri"
-          ],
-          "txts": [
-            "file content"
-          ]
-        },
-        {
-          "title": "aaa",
-          "link": "/subfolder-1/aaa",
-          "type": "item",
-          "elements": [
-
-          ],
-          "file": "wadus uri",
-          "files": [
-            "wadus uri"
-          ],
-          "jpg": "wadus uri",
-          "description": "file content",
-          "descriptions": [
-            "file content"
-          ],
-          "txt": "file content",
-          "jpgs": [
-            "wadus uri"
-          ],
-          "txts": [
-            "file content"
-          ]
-        },
-        {
-          "title": "subsubfolder 1",
-          "link": "/subfolder-1/subsubfolder-1",
-          "type": "collection",
-          "elements": [
-            {
-              "title": "file 1",
-              "link": "/subfolder-1/subsubfolder-1/file-1",
-              "type": "item",
-              "elements": [
-
-              ],
-              "description": "file content",
-              "descriptions": [
-                "file content"
-              ],
-              "txt": "file content",
-              "txts": [
-                "file content"
-              ]
-            }
-          ]
-        }
-      ],
-      "file": "wadus uri",
-      "files": [
-        "wadus uri"
-      ],
-      "jpg": "wadus uri",
-      "description": "file content",
-      "descriptions": [
-        "file content"
-      ],
-      "txt": "file content",
-      "jpgs": [
-        "wadus uri"
-      ],
-      "txts": [
-        "file content"
-      ]
-    },
-    {
-      "title": "subfolder 2",
-      "link": "/subfolder-2",
-      "type": "collection",
-      "elements": [
-        {
-          "title": "file 1",
-          "link": "/subfolder-2/file-1",
-          "type": "item",
-          "elements": [
-
-          ],
-          "description": "file content",
-          "descriptions": [
-            "file content"
-          ],
-          "txt": "file content",
-          "txts": [
-            "file content"
-          ]
-        }
-      ]
-    },
-    {
-      "title": "file 1",
-      "link": "/file-1",
-      "type": "item",
-      "elements": [
-
-      ],
-      "file": "wadus uri",
-      "files": [
-        "wadus uri"
-      ],
-      "jpg": "wadus uri",
-      "meta": {
-        "title": "This is my new title",
-        "collection": "collection1",
-        "price": 10,
-        "summary": "This is a summary\ntwo lines long\n"
-      },
-      "description": "file content",
-      "descriptions": [
-        "file content",
-        "file content"
-      ],
-      "txt_thumb": "file content",
-      "txt": "file content",
-      "jpgs": [
-        "wadus uri"
-      ],
-      "txts": [
-        "file content",
-        "file content"
-      ]
-    }
-  ],
-  "file": "wadus uri",
-  "files": [
-    "wadus uri"
-  ],
-  "jpg": "wadus uri",
-  "description": "root content",
-  "descriptions": [
-    "root content"
-  ],
-  "txt": "root content",
-  "jpgs": [
-    "wadus uri"
-  ],
-  "txts": [
-    "root content"
-  ]
+  }
 }
