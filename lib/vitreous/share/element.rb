@@ -14,6 +14,10 @@ module Vitreous
         end
       end
 
+      def home?
+        @hash['link'] == '/'
+      end
+      
       def collection?
         @hash['type'] == 'collection'
       end

@@ -1,0 +1,13 @@
+assets: /assets_path
+
+    collection: subfolder 1
+      item: bbb
+      item: aaa
+    collection: subfolder 2
+      item: file 1
+
+    home title: fixtures
+    home jpg: wadus uri
+    home txt: home content
+    home description: home content
+    home file: wadus uri

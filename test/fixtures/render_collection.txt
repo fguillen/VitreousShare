@@ -6,8 +6,8 @@ assets: /assets_path
     collection: subfolder 2
       item: file 1
 
-    collection title: subfolder 1
-    collection jpg: wadus uri
-    collection txt: file content
-    collection description: file content
-    collection file: wadus uri
+      collection title: subfolder 1
+      collection jpg: wadus uri
+      collection txt: file content
+      collection description: file content
+      collection file: wadus uri

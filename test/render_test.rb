@@ -41,7 +41,7 @@ class IndexerTest < Test::Unit::TestCase
     assert_equal( File.read( "#{FIXTURES_PATH}/render_item.txt" ), result.body )
   end
   
-  def test_render_root
+  def test_render_home
     index = JSON.load( File.read( "#{FIXTURES_PATH}/index.json" ) )
     result = 
       Vitreous::Share::Render.render(
@@ -51,14 +51,14 @@ class IndexerTest < Test::Unit::TestCase
         :templates => "#{FIXTURES_PATH}/template"
       )
     
-    # # write fixture
-    # puts "This should be commented out!"
-    # File.open( "#{FIXTURES_PATH}/render_root.txt", 'w' ) do |f|
-    #   f.write result.body
-    # end
+    # write fixture
+    puts "This should be commented out!"
+    File.open( "#{FIXTURES_PATH}/render_home.txt", 'w' ) do |f|
+      f.write result.body
+    end
     
     assert_equal( 200, result.status )
-    assert_equal( File.read( "#{FIXTURES_PATH}/render_root.txt" ), result.body )
+    assert_equal( File.read( "#{FIXTURES_PATH}/render_home.txt" ), result.body )
   end
   
   def test_render_not_found

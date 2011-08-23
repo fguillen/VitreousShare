@@ -10,10 +10,15 @@ assets: {{assets}}
 {{/home}}
 
 {{#element}}
-  {{#collection?}}
-    {{>collection}}
-  {{/collection?}}
-  {{#item?}}
-    {{>item}}
-  {{/item?}}
+  {{#home?}}
+    {{>home}}
+  {{/home?}}
+  {{^home?}}
+    {{#collection?}}
+      {{>collection}}
+    {{/collection?}}
+    {{#item?}}
+      {{>item}}
+    {{/item?}}
+  {{/home?}}
 {{/element}}
