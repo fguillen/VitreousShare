@@ -7,8 +7,10 @@ class ElementTest < Test::Unit::TestCase
     
     assert_equal( 'fixtures', home.title )
     assert_equal( '/', home.link )
-    assert_equal( true, home.collection? )
+    assert_equal( true, home.home? )
     assert_equal( false, home.item? )
+    assert_equal( false, home.collection? )
+    assert_equal( false, home.not_found? )
     assert_equal( 3, home.elements.size )
     assert_equal( 1, home.items.size )
     assert_equal( 2, home.collections.size )

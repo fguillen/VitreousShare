@@ -6,8 +6,8 @@ assets: /assets_path
     collection: subfolder 2
       item: file 1
 
-      item title: Not found
-      item jpg: wadus uri
-      item txt: This is the not found item
-      item description: This is the not found item
-      item file: wadus uri
+    not_found title: Not found
+    not_found jpg: wadus uri
+    not_found txt: This is the not found item
+    not_found description: This is the not found item
+    not_found file: wadus uri

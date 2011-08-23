@@ -14,8 +14,13 @@ module Vitreous
         end
       end
 
+
+      def not_found?
+        @hash['type'] == 'not_found'
+      end
+      
       def home?
-        @hash['link'] == '/'
+        @hash['type'] == 'home'
       end
       
       def collection?

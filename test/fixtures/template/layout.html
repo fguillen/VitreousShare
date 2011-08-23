@@ -13,12 +13,13 @@ assets: {{assets}}
   {{#home?}}
     {{>home}}
   {{/home?}}
-  {{^home?}}
-    {{#collection?}}
-      {{>collection}}
-    {{/collection?}}
-    {{#item?}}
-      {{>item}}
-    {{/item?}}
-  {{/home?}}
+  {{#collection?}}
+    {{>collection}}
+  {{/collection?}}
+  {{#item?}}
+    {{>item}}
+  {{/item?}}
+  {{#not_found?}}
+    {{>not_found}}
+  {{/not_found?}}
 {{/element}}

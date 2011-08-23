@@ -6,8 +6,8 @@ assets: /assets_path
     collection: subfolder 2
       item: file 1
 
-      item title: file 1
-      item jpg: 
-      item txt: file content
-      item description: file content
-      item file: 
+    item title: file 1
+    item jpg: 
+    item txt: file content
+    item description: file content
+    item file: 

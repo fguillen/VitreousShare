@@ -2,7 +2,7 @@
   "home": {
     "title": "fixtures",
     "link": "/",
-    "type": "collection",
+    "type": "home",
     "elements": [
       {
         "title": "subfolder 1",
@@ -174,7 +174,7 @@
   },
   "not_found": {
     "title": "Not found",
-    "type": "item",
+    "type": "not_found",
     "elements": [
 
     ],

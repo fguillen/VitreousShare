@@ -18,7 +18,7 @@ module Vitreous
         {
           'title'     => Vitreous::Share::IndexerUtils.to_title( structure['name'] ),
           'link'      => '/',
-          'type'      => 'collection',
+          'type'      => 'home',
           'elements'  => tree( structure['elements'].select { |e| !(e['name'] =~ /^_/) }.sort { |x, y| x['name'] <=> y['name'] } )
         }.merge( 
           Vitreous::Share::IndexerUtils.meta_properties(
@@ -30,7 +30,7 @@ module Vitreous
       def generate_not_found( structure )
         {
           'title'       => 'Not found',
-          'type'        => 'item',
+          'type'        => 'not_found',
           'elements'    => [],
         }.merge( 
           Vitreous::Share::IndexerUtils.meta_properties(
