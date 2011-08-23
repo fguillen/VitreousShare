@@ -11,6 +11,23 @@ class IndexerUtilsTest < Test::Unit::TestCase
     )
   end
   
+  def test_full_path_to_slug
+    assert_equal( 
+      'pepe-y-jun', 
+      Vitreous::Share::IndexerUtils.to_slug( '/folder 1/folder 2/001 pepe y juán.txt' )
+    )
+    
+    assert_equal( 
+      '', 
+      Vitreous::Share::IndexerUtils.to_slug( '/' )
+    )
+    
+    assert_equal( 
+      '', 
+      Vitreous::Share::IndexerUtils.to_slug( '' )
+    )
+  end
+  
   def test_to_slug
     assert_equal( 
       'pepe-y-jun', 

@@ -21,6 +21,12 @@ module Vitreous
         end.join('/')
       end
       
+      def self.full_path_to_slug( path )
+        return ''  if path.empty?
+        
+        to_slug( remove_extensions( path.split('/').last ) )
+      end
+      
       def self.to_slug( string )
         to_title( string ).
           downcase.

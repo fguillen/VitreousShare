@@ -11,3 +11,5 @@ assets: /assets_path
     home txt: home content
     home description: home content
     home file: wadus uri
+    home link: /
+    home slug: 

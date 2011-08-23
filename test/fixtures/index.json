@@ -2,16 +2,19 @@
   "home": {
     "title": "fixtures",
     "link": "/",
+    "slug": "",
     "type": "home",
     "elements": [
       {
         "title": "subfolder 1",
         "link": "/subfolder-1",
+        "slug": "subfolder-1",
         "type": "collection",
         "elements": [
           {
             "title": "bbb",
             "link": "/subfolder-1/bbb",
+            "slug": "bbb",
             "type": "item",
             "elements": [
 
@@ -36,6 +39,7 @@
           {
             "title": "aaa",
             "link": "/subfolder-1/aaa",
+            "slug": "aaa",
             "type": "item",
             "elements": [
 
@@ -60,11 +64,13 @@
           {
             "title": "subsubfolder 1",
             "link": "/subfolder-1/subsubfolder-1",
+            "slug": "subsubfolder-1",
             "type": "collection",
             "elements": [
               {
                 "title": "file 1",
                 "link": "/subfolder-1/subsubfolder-1/file-1",
+                "slug": "file-1",
                 "type": "item",
                 "elements": [
 
@@ -101,11 +107,13 @@
       {
         "title": "subfolder 2",
         "link": "/subfolder-2",
+        "slug": "subfolder-2",
         "type": "collection",
         "elements": [
           {
             "title": "file 1",
             "link": "/subfolder-2/file-1",
+            "slug": "file-1",
             "type": "item",
             "elements": [
 
@@ -124,6 +132,7 @@
       {
         "title": "file 1",
         "link": "/file-1",
+        "slug": "file-1",
         "type": "item",
         "elements": [
 
@@ -175,6 +184,7 @@
   "not_found": {
     "title": "Not found",
     "type": "not_found",
+    "slug": "not_found",
     "elements": [
 
     ],

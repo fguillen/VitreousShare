@@ -11,3 +11,5 @@ assets: /assets_path
     not_found txt: This is the not found item
     not_found description: This is the not found item
     not_found file: wadus uri
+    not_found link: 
+    not_found slug: not_found

@@ -18,6 +18,7 @@ module Vitreous
         {
           'title'     => Vitreous::Share::IndexerUtils.to_title( structure['name'] ),
           'link'      => '/',
+          'slug'      => '',
           'type'      => 'home',
           'elements'  => tree( structure['elements'].select { |e| !(e['name'] =~ /^_/) }.sort { |x, y| x['name'] <=> y['name'] } )
         }.merge( 
@@ -31,6 +32,7 @@ module Vitreous
         {
           'title'       => 'Not found',
           'type'        => 'not_found',
+          'slug'        => 'not_found',
           'elements'    => [],
         }.merge( 
           Vitreous::Share::IndexerUtils.meta_properties(
@@ -44,6 +46,7 @@ module Vitreous
           {
             'title'    => Vitreous::Share::IndexerUtils.to_title( e[0]['name'] ),
             'link'     => Vitreous::Share::IndexerUtils.to_link( e[0]['path'] ),
+            'slug'     => Vitreous::Share::IndexerUtils.to_slug( e[0]['path'] ),
             'type'     => e.any? { |e2| e2['type'] == 'directory' } ? 'collection' : 'item',
             'elements' => tree( e[0]['elements'].sort { |x, y| x['name'] <=> y['name'] } )
           }.merge( Vitreous::Share::IndexerUtils.meta_properties( e ) )

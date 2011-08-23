@@ -11,3 +11,5 @@ assets: /assets_path
     collection txt: file content
     collection description: file content
     collection file: wadus uri
+    collection link: /subfolder-1
+    collection slug: subfolder-1

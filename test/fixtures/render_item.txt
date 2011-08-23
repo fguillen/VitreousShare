@@ -11,3 +11,5 @@ assets: /assets_path
     item txt: file content
     item description: file content
     item file: 
+    item link: /subfolder-1/subsubfolder-1/file-1
+    item slug: file-1
